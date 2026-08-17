@@ -3,34 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Customer Churn Prediction</title>
-
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
-
 <body>
 
     <div class="container">
 
-        <h1>📊 Customer Churn Prediction</h1>
-
-        <p class="subtitle">
-            Predict whether a telecom customer is likely to churn.
-        </p>
+        <h1>Customer Churn Prediction</h1>
+        <p class="subtitle">Predict whether a telecom customer is likely to churn.</p>
 
         <form id="churnForm">
 
-            <!-- Customer Information -->
             <h2>Customer Information</h2>
-
             <div class="form-grid">
 
                 <div class="form-group">
                     <label>Gender</label>
                     <select id="gender">
-                        <option value="0">Female</option>
-                        <option value="1">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
                     </select>
                 </div>
 
@@ -45,16 +37,16 @@
                 <div class="form-group">
                     <label>Partner</label>
                     <select id="Partner">
-                        <option value="0">No</option>
-                        <option value="1">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Dependents</label>
                     <select id="Dependents">
-                        <option value="0">No</option>
-                        <option value="1">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
                     </select>
                 </div>
 
@@ -66,154 +58,139 @@
                 <div class="form-group">
                     <label>Phone Service</label>
                     <select id="PhoneService">
-                        <option value="0">No</option>
-                        <option value="1">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Paperless Billing</label>
                     <select id="PaperlessBilling">
-                        <option value="0">No</option>
-                        <option value="1">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Monthly Charges</label>
-                    <input type="number" id="MonthlyCharges"
-                           step="0.01" value="70" required>
+                    <input type="number" id="MonthlyCharges" step="0.01" value="70" required>
                 </div>
 
                 <div class="form-group">
                     <label>Total Charges</label>
-                    <input type="number" id="TotalCharges"
-                           step="0.01" value="840" required>
+                    <input type="number" id="TotalCharges" step="0.01" value="840" required>
                 </div>
 
             </div>
 
-
-            <!-- Services -->
             <h2>Services</h2>
-
             <div class="form-grid">
 
                 <div class="form-group">
                     <label>Multiple Lines</label>
                     <select id="MultipleLines">
-                        <option value="none">No</option>
-                        <option value="no_phone">No phone service</option>
-                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="No phone service">No phone service</option>
+                        <option value="Yes">Yes</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Internet Service</label>
                     <select id="InternetService">
-                        <option value="dsl">DSL</option>
-                        <option value="fiber">Fiber optic</option>
-                        <option value="no">No</option>
+                        <option value="DSL">DSL</option>
+                        <option value="Fiber optic">Fiber optic</option>
+                        <option value="No">No</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Online Security</label>
                     <select id="OnlineSecurity">
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
-                        <option value="no_internet">No internet service</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No internet service">No internet service</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Online Backup</label>
                     <select id="OnlineBackup">
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
-                        <option value="no_internet">No internet service</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No internet service">No internet service</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Device Protection</label>
                     <select id="DeviceProtection">
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
-                        <option value="no_internet">No internet service</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No internet service">No internet service</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Tech Support</label>
                     <select id="TechSupport">
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
-                        <option value="no_internet">No internet service</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No internet service">No internet service</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Streaming TV</label>
                     <select id="StreamingTV">
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
-                        <option value="no_internet">No internet service</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No internet service">No internet service</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Streaming Movies</label>
                     <select id="StreamingMovies">
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
-                        <option value="no_internet">No internet service</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No internet service">No internet service</option>
                     </select>
                 </div>
 
             </div>
 
-
-            <!-- Contract -->
             <h2>Contract & Payment</h2>
-
             <div class="form-grid">
 
                 <div class="form-group">
                     <label>Contract</label>
                     <select id="Contract">
-                        <option value="month">Month-to-month</option>
-                        <option value="one_year">One year</option>
-                        <option value="two_year">Two year</option>
+                        <option value="Month-to-month">Month-to-month</option>
+                        <option value="One year">One year</option>
+                        <option value="Two year">Two year</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Payment Method</label>
                     <select id="PaymentMethod">
-                        <option value="electronic">Electronic check</option>
-                        <option value="credit">Credit card (automatic)</option>
-                        <option value="mailed">Mailed check</option>
-                        <option value="bank">Bank transfer (automatic)</option>
+                        <option value="Electronic check">Electronic check</option>
+                        <option value="Mailed check">Mailed check</option>
+                        <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+                        <option value="Credit card (automatic)">Credit card (automatic)</option>
                     </select>
                 </div>
 
             </div>
 
-
-            <button type="submit">
-                🔮 Predict Customer Churn
-            </button>
+            <button type="submit">Predict Customer Churn</button>
 
         </form>
 
-
-        <!-- Result -->
         <div id="result" class="result hidden">
             <h2>Prediction Result</h2>
-
             <p id="prediction"></p>
-
             <p id="probability"></p>
         </div>
 
