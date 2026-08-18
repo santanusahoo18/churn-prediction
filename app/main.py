@@ -114,16 +114,16 @@ def encode_customer(data: dict) -> pd.DataFrame:
 # 5. ROUTES
 # =========================================================
 
-@app.get("/")
-def home():
-    return {"message": "Customer Churn Prediction API is running!"}
-
-
-@app.get("/home", response_class=HTMLResponse)
-def home_page(request: Request):
+@app.get("/", response_class=HTMLResponse)
+def home(request: Request):
     return templates.TemplateResponse(
         request=request, name="index.html", context={"request": request}
     )
+
+
+@app.get("/status")
+def status():
+    return {"message": "Customer Churn Prediction API is running!"}
 
 
 @app.get("/model-info")
